@@ -7,16 +7,10 @@ export const ContactsForm = ({ handleAddContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [state, setState] = useState(INITIAL_STATE);
-  // const { name, password } = state;
-  // const handleChangeInput = ({ target: { name, value } }) => {
-  //   setState({ [name]: value });
-  // };
 
   const handleChangeInput = ({ target }) => {
     const { name, value } = target;
-    // if (value.includes('!')) {
-    //   alert('wrong!');
-    // }
+
     setState(prev => ({ ...prev, [name]: value }));
     switch (name) {
       case 'name':

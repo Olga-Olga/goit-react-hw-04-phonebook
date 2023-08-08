@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContactList = ({ paramList, onDelete }) => {
+const ContactList = ({ paramList = [], onDelete }) => {
   return (
     <div>
       {paramList.map(el => (
