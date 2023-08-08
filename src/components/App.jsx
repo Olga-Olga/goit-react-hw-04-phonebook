@@ -1,5 +1,5 @@
 import ContactList from './ContactList';
-import ContactsForm from './ContactsForm';
+import { ContactsForm } from './ContactsForm';
 import Filter from './Filter';
 import React from 'react';
 import { nanoid } from 'nanoid';
@@ -14,6 +14,9 @@ export class App extends React.Component {
     ],
     filter: '',
   };
+
+  // const [contacts, setContacts] = useState('');
+  // const[filter, setFilter] = useState('');
 
   componentDidMount() {
     const stor = JSON.parse(localStorage.getItem('contacts'));
