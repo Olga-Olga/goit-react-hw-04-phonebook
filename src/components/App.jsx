@@ -12,6 +12,9 @@ export const App = () => {
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
   ];
   const [contacts, setContacts] = useState(data);
+  console.log(contacts);
+  console.log(setContacts);
+
   const [filterStr, setFilter] = useState('');
 
   useEffect(() => {
