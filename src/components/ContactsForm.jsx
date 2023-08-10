@@ -2,16 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 export const ContactsForm = ({ handleAddContact }) => {
-  const INITIAL_STATE = { name: '', number: '' };
-
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const [state, setState] = useState(INITIAL_STATE);
 
   const handleChangeInput = ({ target }) => {
     const { name, value } = target;
 
-    setState(prev => ({ ...prev, [name]: value }));
     switch (name) {
       case 'name':
         setName(value);
@@ -27,8 +23,8 @@ export const ContactsForm = ({ handleAddContact }) => {
     const name = event.target.name.value;
     const number = event.target.number.value;
     handleAddContact({ name, number });
-    // event.target.reset();
-    setState({ name: '', number: '' });
+    setName('');
+    setNumber('');
   };
 
   return (
